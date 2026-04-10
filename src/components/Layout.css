@@ -1,0 +1,50 @@
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.layout-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.layout-main > * {
+  width: min(100%, 1400px);
+  max-width: 100%;
+}
+
+.layout-main.with-navbar {
+  padding-top: 80px !important;
+  margin-top: 0;
+}
+
+.app-layout {
+  overflow-x: hidden;
+}
+
+.layout-main.without-navbar {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+/* Responsive adjustments for navbar height */
+@media (max-width: 768px) {
+  .layout-main.with-navbar {
+    padding-top: 70px;
+  }
+}
+
+/* Ensure smooth transitions */
+.layout-main {
+  transition: padding-top 0.3s ease;
+}

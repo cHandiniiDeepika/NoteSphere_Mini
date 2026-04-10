@@ -1,0 +1,234 @@
+:root {
+  --text: #1f2937;
+  --text-h: #0f172a;
+  --text-muted: #6b7280;
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-secondary: #f9fafb;
+  --border: #e5e7eb;
+  --code-bg: #f4f3ec;
+  --accent: #667eea;
+  --accent-bg: rgba(102, 126, 234, 0.1);
+  --accent-border: rgba(102, 126, 234, 0.5);
+  --social-bg: rgba(244, 243, 236, 0.5);
+  --shadow: rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
+  --shadow-soft: rgba(15, 23, 42, 0.08) 0 10px 30px -10px;
+  --input-bg: #ffffff;
+  --input-border: #e5e7eb;
+  --button-bg: #ffffff;
+  --button-color: #374151;
+  --navbar-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --panel-bg: #ffffff;
+  --panel-strong: #f3f4f6;
+  --surface-border: rgba(148, 163, 184, 0.15);
+  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color-scheme: light;
+  color: var(--text);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html[data-theme='dark'] {
+  --text: #e2e8f0;
+  --text-h: #f8fafc;
+  --text-muted: #94a3b8;
+  --bg: #0b1220;
+  --surface: #111827;
+  --surface-secondary: #17233a;
+  --border: #334155;
+  --code-bg: #111827;
+  --accent: #a5b4fc;
+  --accent-bg: rgba(165, 180, 252, 0.12);
+  --accent-border: rgba(165, 180, 252, 0.4);
+  --social-bg: rgba(30, 41, 59, 0.55);
+  --shadow: rgba(0, 0, 0, 0.35) 0 15px 30px -15px, rgba(0, 0, 0, 0.2) 0 6px 12px -6px;
+  --shadow-soft: rgba(15, 23, 42, 0.35) 0 10px 30px -10px;
+  --input-bg: #0f172a;
+  --input-border: #334155;
+  --button-bg: #1f2937;
+  --button-color: #e2e8f0;
+  --navbar-bg: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+  --panel-bg: #111827;
+  --panel-strong: #17233a;
+  --surface-border: rgba(148, 163, 184, 0.15);
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+input,
+textarea,
+select {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+}
+
+button {
+  border: 1px solid transparent;
+}
+
+.theme-toggle-btn {
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: 1px solid var(--input-border);
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.signup-theme-toggle {
+  margin-top: 1rem;
+}
+
+html[data-theme='dark'] .theme-toggle-btn {
+  background: var(--surface-secondary);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+body,
+.dashboard,
+.browse-page,
+.favorites-container,
+.my-notes-container,
+.profile-container,
+.upload-container,
+.signin-container,
+.signup-container,
+.home-container,
+.main-content,
+.dashboard-container,
+.browse-container,
+.filters-sidebar,
+.sidebar,
+.note-card,
+.feed-item,
+.activity-item,
+.search-box,
+.search-input,
+.filter-select,
+.form-input,
+.signup-card,
+.home-box {
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+html[data-theme='dark'] body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html[data-theme='dark'] .navbar {
+  background: var(--navbar-bg) !important;
+}
+
+html[data-theme='dark'] .btn-secondary,
+html[data-theme='dark'] .search-input,
+html[data-theme='dark'] .filter-select,
+html[data-theme='dark'] .form-input,
+html[data-theme='dark'] .signup-card,
+html[data-theme='dark'] .home-box,
+html[data-theme='dark'] .filters-sidebar,
+html[data-theme='dark'] .sidebar,
+html[data-theme='dark'] .note-card,
+html[data-theme='dark'] .feed-item,
+html[data-theme='dark'] .activity-item,
+html[data-theme='dark'] .signup-content,
+html[data-theme='dark'] .browse-container,
+html[data-theme='dark'] .dashboard-container,
+html[data-theme='dark'] .favorites-container,
+html[data-theme='dark'] .my-notes-container,
+html[data-theme='dark'] .profile-container,
+html[data-theme='dark'] .upload-container,
+html[data-theme='dark'] .signin-container,
+html[data-theme='dark'] .signup-container {
+  background: var(--surface) !important;
+  color: var(--text) !important;
+  border-color: var(--border) !important;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}

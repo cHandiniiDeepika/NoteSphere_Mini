@@ -40,15 +40,15 @@
   .browse-container {
     padding: 1.5rem;
   }
-  
+
   .browse-header h1 {
     font-size: 2rem;
   }
-  
+
   .browse-layout {
     gap: 1.5rem;
   }
-  
+
   .filters-sidebar {
     width: 250px;
   }
@@ -59,24 +59,24 @@
   .browse-container {
     padding: 1rem;
   }
-  
+
   .browse-header {
     margin-bottom: 2rem;
   }
-  
+
   .browse-header h1 {
     font-size: 1.75rem;
   }
-  
+
   .browse-header p {
     font-size: 1rem;
   }
-  
+
   .browse-layout {
     flex-direction: column;
     gap: 1.5rem;
   }
-  
+
   .filters-sidebar {
     width: 100%;
     position: static;
@@ -89,11 +89,11 @@
   .browse-container {
     padding: 0.75rem;
   }
-  
+
   .browse-header h1 {
     font-size: 1.5rem;
   }
-  
+
   .browse-header p {
     font-size: 0.9rem;
   }
@@ -376,7 +376,9 @@
   margin: 0 0 0.5rem;
   line-height: 1.4;
   display: -webkit-box;
+  display: -moz-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -387,7 +389,9 @@
   line-height: 1.4;
   margin: 0 0 0.5rem;
   display: -webkit-box;
+  display: -moz-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -664,19 +668,19 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .notes-container.grid .note-card {
     padding: 0.875rem;
   }
-  
+
   .notes-container.grid .note-title {
     font-size: 0.95rem;
   }
-  
+
   .notes-container.grid .note-description {
     font-size: 0.8rem;
   }
-  
+
   .notes-container.grid .action-btn {
     padding: 0.375rem 0.5rem;
     font-size: 0.7rem;
@@ -689,63 +693,63 @@
     gap: 0.75rem;
     padding: 0.75rem;
   }
-  
+
   .notes-container.grid .note-card {
     padding: 0.75rem;
   }
-  
+
   .notes-container.grid .note-header {
     flex-direction: column;
     gap: 0.75rem;
     align-items: flex-start;
   }
-  
+
   .notes-container.grid .note-thumbnail {
     width: 60px;
     height: 60px;
     font-size: 1.5rem;
   }
-  
+
   .notes-container.grid .note-title {
     font-size: 0.9rem;
   }
-  
+
   .notes-container.grid .note-description {
     font-size: 0.75rem;
   }
-  
+
   .notes-container.grid .note-actions {
     flex-wrap: wrap;
     gap: 0.375rem;
   }
-  
+
   .notes-container.grid .action-btn {
     padding: 0.3rem 0.4rem;
     font-size: 0.65rem;
   }
-  
+
   .notes-container.list .note-card {
     padding: 0.75rem 1rem;
   }
-  
+
   .notes-container.list .note-thumbnail {
     width: 50px;
     height: 50px;
     font-size: 1.25rem;
   }
-  
+
   .notes-container.list .note-title {
     font-size: 0.9rem;
   }
-  
+
   .notes-container.list .note-description {
     font-size: 0.75rem;
   }
-  
+
   .notes-container.list .note-actions {
     gap: 0.375rem;
   }
-  
+
   .notes-container.list .action-btn {
     padding: 0.3rem 0.5rem;
     font-size: 0.7rem;
@@ -758,34 +762,34 @@
     gap: 0.5rem;
     padding: 0.5rem;
   }
-  
+
   .notes-container.grid .note-card {
     padding: 0.5rem;
   }
-  
+
   .notes-container.grid .note-header {
     margin-bottom: 0.75rem;
   }
-  
+
   .notes-container.grid .note-thumbnail {
     width: 50px;
     height: 50px;
     font-size: 1.25rem;
   }
-  
+
   .notes-container.grid .note-title {
     font-size: 0.85rem;
   }
-  
+
   .notes-container.grid .note-description {
     font-size: 0.7rem;
   }
-  
+
   .notes-container.grid .note-meta {
     flex-wrap: wrap;
     gap: 0.25rem;
   }
-  
+
   .notes-container.grid .note-author,
   .notes-container.grid .note-date,
   .notes-container.grid .note-size,
@@ -793,53 +797,53 @@
     font-size: 0.65rem;
     padding: 0.15rem 0.3rem;
   }
-  
+
   .notes-container.grid .note-stats {
     margin-top: 0.5rem;
     padding-top: 0.5rem;
   }
-  
+
   .notes-container.grid .note-tags {
     gap: 0.2rem;
   }
-  
+
   .notes-container.grid .tag {
     font-size: 0.6rem;
     padding: 0.15rem 0.3rem;
   }
-  
+
   .notes-container.grid .note-actions {
     margin-top: 0.75rem;
     gap: 0.25rem;
   }
-  
+
   .notes-container.grid .action-btn {
     padding: 0.25rem 0.3rem;
     font-size: 0.6rem;
   }
-  
+
   .notes-container.list .note-card {
     padding: 0.5rem 0.75rem;
   }
-  
+
   .notes-container.list .note-thumbnail {
     width: 40px;
     height: 40px;
     font-size: 1rem;
   }
-  
+
   .notes-container.list .note-title {
     font-size: 0.8rem;
   }
-  
+
   .notes-container.list .note-description {
     font-size: 0.7rem;
   }
-  
+
   .notes-container.list .note-actions {
     gap: 0.25rem;
   }
-  
+
   .notes-container.list .action-btn {
     padding: 0.25rem 0.3rem;
     font-size: 0.6rem;
@@ -937,18 +941,18 @@
   .browse-layout {
     flex-direction: column;
   }
-  
+
   .filters-sidebar {
     width: 100%;
     position: static;
   }
-  
+
   .results-header {
     flex-direction: column;
     gap: 1rem;
     align-items: stretch;
   }
-  
+
   .view-controls {
     justify-content: center;
   }
@@ -958,60 +962,60 @@
   .browse-container {
     padding: 1rem;
   }
-  
+
   .browse-header h1 {
     font-size: 2rem;
   }
-  
+
   .filters-sidebar {
     padding: 1rem;
   }
-  
+
   .notes-container.grid {
     grid-template-columns: 1fr;
   }
-  
+
   .notes-container.list .note-card {
     flex-direction: column;
     align-items: flex-start;
   }
-  
+
   .notes-container.list .note-header {
     width: 100%;
   }
-  
+
   .notes-container.list .note-thumbnail {
     margin-right: 0;
     margin-bottom: 1rem;
   }
-  
+
   .notes-container.list .note-actions {
     justify-content: center;
     gap: 0.5rem;
   }
-  
+
   .view-btn {
     padding: 0.5rem 0.75rem;
     font-size: 0.8rem;
   }
-  
+
   .view-btn span {
     font-size: 0.85rem;
   }
-  
+
   .notes-container.grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
   }
-  
+
   .notes-container.list {
     gap: 1rem;
   }
-  
+
   .pagination {
     margin-top: 1.5rem;
   }
-  
+
   .pagination-btn {
     padding: 0.5rem 0.75rem;
     font-size: 0.8rem;
@@ -1022,104 +1026,104 @@
   .browse-container {
     padding: 0.75rem;
   }
-  
+
   .browse-header {
     margin-bottom: 1.5rem;
   }
-  
+
   .browse-header h1 {
     font-size: 1.8rem;
   }
-  
+
   .browse-header p {
     font-size: 0.9rem;
   }
-  
+
   .browse-layout {
     gap: 1rem;
   }
-  
+
   .filters-sidebar {
     padding: 1rem;
     border-radius: 16px;
   }
-  
+
   .main-content {
     padding: 0.75rem;
   }
-  
+
   .filters-header {
     margin-bottom: 1rem;
   }
-  
+
   .filters-header h2 {
     font-size: 1.1rem;
   }
-  
+
   .clear-filters {
     padding: 0.4375rem 1rem;
     font-size: 0.8rem;
   }
-  
+
   .filter-section {
     margin-bottom: 1rem;
   }
-  
+
   .filter-section h3 {
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .search-input {
     padding: 0.5rem 0.75rem;
     font-size: 0.85rem;
   }
-  
-    
+
+
   .filter-option {
     padding: 0.4375rem 0.625rem;
     font-size: 0.8rem;
   }
-  
+
   .filter-option label {
     font-size: 0.8rem;
   }
-  
+
   .content-header {
     margin-bottom: 1rem;
     gap: 0.75rem;
   }
-  
+
   .results-info {
     font-size: 0.85rem;
   }
-  
+
   .view-controls {
     gap: 0.375rem;
   }
-  
+
   .view-btn {
     padding: 0.4375rem 0.625rem;
     font-size: 0.75rem;
   }
-  
+
   .view-btn span {
     font-size: 0.8rem;
   }
-  
+
   .notes-container.grid {
     grid-template-columns: 1fr;
     gap: 0.875rem;
   }
-  
+
   .notes-container.list {
     gap: 0.875rem;
   }
-  
+
   .pagination {
     margin-top: 1.25rem;
   }
-  
+
   .pagination-btn {
     padding: 0.4375rem 0.625rem;
     font-size: 0.75rem;
@@ -1132,28 +1136,28 @@
     max-width: 1600px;
     padding: 2.5rem;
   }
-  
+
   .browse-header h1 {
     font-size: 2.8rem;
   }
-  
+
   .browse-header p {
     font-size: 1.2rem;
   }
-  
+
   .browse-layout {
     gap: 2.5rem;
   }
-  
+
   .filters-sidebar {
     width: 320px;
     padding: 2rem;
   }
-  
+
   .main-content {
     padding: 2rem;
   }
-  
+
   .notes-container.grid {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 1.5rem;
@@ -1166,15 +1170,15 @@
     transform: none;
     background: #ef4444;
   }
-  
+
   .filter-option:hover {
     background: #f9fafb;
   }
-  
+
   .view-btn:hover {
     background: #f3f4f6;
   }
-  
+
   .pagination-btn:hover {
     transform: none;
   }
@@ -1185,12 +1189,12 @@
   .browse-page {
     background: white;
   }
-  
+
   .filters-sidebar,
   .main-content {
     border: 2px solid #000;
   }
-  
+
   .search-input,
   .filter-option {
     border: 2px solid #000;
@@ -1199,13 +1203,14 @@
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
   .clear-filters,
   .filter-option,
   .view-btn,
   .pagination-btn {
     transition: none;
   }
-  
+
   .clear-filters:hover,
   .view-btn:hover,
   .pagination-btn:hover {

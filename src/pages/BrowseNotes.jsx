@@ -329,8 +329,8 @@ const BrowseNotes = () => {
   const filteredAndSortedNotes = useMemo(() => {
     let filtered = ALL_MOCK_NOTES.filter(note => {
       const matchesSearch = note.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           note.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                           note.author.toLowerCase().includes(searchQuery.toLowerCase());
+        note.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        note.author.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesBranch = !selectedBranch || note.branch === selectedBranch;
       const matchesYear = !selectedYear || note.year === selectedYear;
       const matchesSubject = !selectedSubject || note.subject === selectedSubject;
@@ -382,7 +382,7 @@ const BrowseNotes = () => {
 
   const handleNoteAction = (noteId, action, value) => {
     console.log(`Note ${noteId} ${action}:`, value);
-    
+
     if (action === 'favorite') {
       // Add to favorites
       const note = ALL_MOCK_NOTES.find(n => n.id === noteId);
@@ -391,7 +391,7 @@ const BrowseNotes = () => {
           ...note,
           favoritedDate: new Date().toISOString()
         };
-        
+
         // Check if already in favorites
         const isAlreadyFavorited = favorites.some(fav => fav.id === noteId);
         if (!isAlreadyFavorited) {
@@ -528,12 +528,12 @@ const BrowseNotes = () => {
               transition: 'transform 0.2s, box-shadow 0.2s'
             }}>
               <div style={{ marginBottom: '1rem' }}>
-                <img 
-                  src={note.thumbnail} 
+                <img
+                  src={note.thumbnail}
                   alt={note.title}
-                  style={{ 
-                    width: '100%', 
-                    height: '150px', 
+                  style={{
+                    width: '100%',
+                    height: '150px',
                     objectFit: 'cover',
                     borderRadius: '4px'
                   }}
@@ -547,7 +547,7 @@ const BrowseNotes = () => {
                 <span style={{ fontSize: '0.8rem', color: '#6b7280' }}>Rating: {note.rating} | Downloads: {note.downloads}</span>
               </div>
               <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <button 
+                <button
                   onClick={() => handleViewNote(note.id)}
                   style={{
                     padding: '0.5rem 1rem',
@@ -561,7 +561,7 @@ const BrowseNotes = () => {
                 >
                   View
                 </button>
-                <button 
+                <button
                   onClick={() => handleDownload(note.id)}
                   style={{
                     padding: '0.5rem 1rem',
@@ -575,7 +575,7 @@ const BrowseNotes = () => {
                 >
                   Download
                 </button>
-                <button 
+                <button
                   onClick={() => handleNoteAction(note.id, 'favorite')}
                   style={{
                     padding: '0.5rem 1rem',

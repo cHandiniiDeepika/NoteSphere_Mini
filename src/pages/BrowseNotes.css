@@ -202,10 +202,49 @@
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
+.filter-option {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 0.5rem;
+}
+
+.filter-option:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.filter-option input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.filter-option label {
+  flex: 1;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
 /* Main Content */
 .browse-main {
   flex: 1;
   min-width: 0;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.main-content {
+  padding: 1rem;
 }
 
 .results-header {
@@ -807,6 +846,46 @@
   }
 }
 
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.pagination-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e5e7eb;
+  background: white;
+  color: #6b7280;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.pagination-btn:hover {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+  transform: translateY(-1px);
+}
+
+.pagination-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
 /* No Results */
 .no-results {
   text-align: center;
@@ -920,12 +999,12 @@
     font-size: 0.85rem;
   }
   
-  .notes-grid {
+  .notes-container.grid {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1rem;
   }
   
-  .notes-list {
+  .notes-container.list {
     gap: 1rem;
   }
   
@@ -996,11 +1075,7 @@
     font-size: 0.85rem;
   }
   
-  .search-icon {
-    right: 0.75rem;
-    font-size: 0.85rem;
-  }
-  
+    
   .filter-option {
     padding: 0.4375rem 0.625rem;
     font-size: 0.8rem;
@@ -1032,12 +1107,12 @@
     font-size: 0.8rem;
   }
   
-  .notes-grid {
+  .notes-container.grid {
     grid-template-columns: 1fr;
     gap: 0.875rem;
   }
   
-  .notes-list {
+  .notes-container.list {
     gap: 0.875rem;
   }
   
@@ -1079,7 +1154,7 @@
     padding: 2rem;
   }
   
-  .notes-grid {
+  .notes-container.grid {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 1.5rem;
   }
